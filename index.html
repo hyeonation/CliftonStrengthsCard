@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CliftonStrengths</title>
+
+    <style>
+
+        body{
+            background-color:cornsilk;
+        }
+
+        /* card type */
+        .card_type {
+            display: grid;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 3px dashed black;
+            
+            /* 양쪽이 같은 크기가 됨 */
+            grid-template-columns: 1fr 1fr; 
+        }
+
+        .card_type button {
+            font-size: 180%;
+            border: 2px solid black;
+            padding: 10px;
+            font-weight: bold;
+            margin: 5px;
+
+            background-color: white;
+        }
+
+        /* section */
+        .section {
+            display: grid;
+            text-align: center;
+            
+            /* 양쪽이 같은 크기가 됨 */
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+        }
+
+        .section div {
+            font-size: 150%;
+            border: 2px solid black;
+            margin: 1px;
+        }
+
+        /* contents */
+        .contents {
+            display: grid;
+            text-align: center;
+            
+            /* 양쪽이 같은 크기가 됨 */
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+        }
+
+        .talents{
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .talents button{
+            font-size: 110%;
+            font-weight: bold;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            
+            margin: 1px;
+        }
+
+        .executing button, .section .executing{
+            background-color:blueviolet;
+        }
+
+        .influencing button, .section .influencing{
+            background-color:darkorange;
+        }
+
+        .relationship button, .section .relationship{
+            background-color:dodgerblue;
+        }
+
+        .strategy button, .section .strategy{
+            background-color:darkgreen;
+        }
+
+        #blank{
+            opacity: 0;
+        }
+
+        .talent:active{
+            border: 2px solid yellow;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card_type">
+
+        <button id="type_1" value="theme deep understanding">테마 심층 이해</button>
+        <button id="type_2" value="theme interaction">테마 상호 작용</button>
+
+    </div>
+
+    <div class="section">
+
+        <div class="executing">실행력</div>
+        <div class="influencing">영향력</div>
+        <div class="relationship">대인관계 구축</div>
+        <div class="strategy">전략적 사고</div>
+
+    </div>
+
+    <div class="contents">
+
+        <!-- 실행력 -->
+        <div class="talents executing">
+            <!-- <div id="책임" name="responsibility" onclick="out_img()">책임</div> -->
+            
+            <button class="talent" value="7_책임">책임</button>
+            <button class="talent" value="18_정리">정리</button>
+            <button class="talent" value="22_공정성">공정성</button>
+            <button class="talent" value="25_집중">집중</button>
+            <button class="talent" value="27_체계">체계</button>
+            <button class="talent" value="29_신념">신념</button>
+            <button class="talent" value="30_성취">성취</button>
+            <button class="talent" value="32_심사숙고">심사숙고</button>
+            <button class="talent" value="34_복구">복구</button>
+            <button name="blank" id="blank">blank</button>
+
+        </div>
+
+        <!-- 영향력 -->
+        <div class="talents influencing">
+            
+            <button class="talent" value="8_자기확신">자기확신</button>
+            <button class="talent" value="10_최상화">최상화</button>
+            <button class="talent" value="11_커뮤니케이션">커뮤니케이션</button>
+            <button class="talent" value="20_행동">행동</button>
+            <button class="talent" value="23_존재감">존재감</button>
+            <button class="talent" value="26_주도력">주도력</button>
+            <button class="talent" value="31_승부">승부</button>
+            <button class="talent" value="33_사교성">사교성</button>
+            <button name="blank" id="blank">blank</button>
+            <button name="blank" id="blank">blank</button>
+
+        </div>
+
+        <!-- 대인관계 구축 -->
+        <div class="talents relationship">
+
+            <button class="talent" value="5_공감">공감</button>
+            <button class="talent" value="6_개별화">개별화</button>
+            <button class="talent" value="9_포용">포용</button>
+            <button class="talent" value="12_절친">절친</button>
+            <button class="talent" value="13_개발">개발</button>
+            <button class="talent" value="15_적응">적응</button>
+            <button class="talent" value="16_연결성">연결성</button>
+            <button class="talent" value="19_긍정">긍정</button>
+            <button class="talent" value="28_화합">화합</button>
+            <button name="blank" id="blank">blank</button>
+
+        </div>
+
+        <!-- 전략적 사고 -->
+        <div class="talents strategy">
+
+            <button class="talent" value="1_전략">전략</button>
+            <button class="talent" value="2_배움">배움</button>
+            <button class="talent" value="3_분석">분석</button>
+            <button class="talent" value="4_지적사고">지적사고</button>
+            <button class="talent" value="14_발상">발상</button>
+            <button class="talent" value="17_수집">수집</button>
+            <button class="talent" value="21_회고">회고</button>
+            <button class="talent" value="24_미래지향">미래지향</button>
+            <button name="blank" id="blank">blank</button>
+            <button name="blank" id="blank">blank</button>
+
+        </div>
+
+    </div>
+
+    <img id="card" src="img/Gallup Strengths Coach.png" alt="Talent Card">
+
+</body>
+
+<!-- script는 body 뒤에 작성 추천 -->
+<!-- head 안에 쓰면 변수 나오기 전에 정의되므로 작동 안 할수도 -->
+<script>
+
+    //// preset
+    var card_type = document.getElementById("type_1");
+    var card_page = true;
+    var card_talent;
+
+    // default : card type 1 
+    card_type.style.backgroundColor = "yellow";
+
+
+    //// card type 선택
+    function select_card_type(event){
+
+        // 이전 비활성화
+        card_type.style.backgroundColor = "white";
+
+        // 새로 활성화
+        event.target.style.backgroundColor = "yellow";
+
+        // 변수 업데이트
+        card_type = event.target;
+
+        // 카드 업데이트
+        update_card();
+
+    }
+
+    //// 재능 선택
+    function select_talent(event){
+
+        // update talent
+        card_talent = event.target;
+
+        // 카드 업데이트
+        update_card();
+
+    }
+
+    //// 이미지 클릭 시 토글
+    function push_img(event){
+
+        card_page = !card_page;
+
+        // 카드 업데이트
+        update_card();
+
+    }
+
+    //// 재능 카드 보여주기
+    function update_card() {
+        
+        // talent 값이 있을 때만
+        if (card_talent){
+
+            var img_loc = 'img/' + card_type.value + '/'
+                          + convert_page(card_page) + '/'
+                          + card_talent.value;
+
+            document.getElementById("card").src = img_loc + ".png";
+
+        }
+    }
+
+    //// convert file loc
+    function convert_page(card_page){
+
+        var page_loc;
+        var list_page_loc;
+
+        // list_page_loc
+        if (card_type.id == "type_1"){
+            list_page_loc = ['deep', 'compare'];
+        }
+
+        else{
+            list_page_loc = ['adj', 'noun'];
+        }
+
+        // page_loc
+        if (card_page) {
+            page_loc = list_page_loc[0];
+        }
+        else {
+            page_loc = list_page_loc[1];
+        }
+
+        return page_loc;
+    }
+
+
+    //// 버튼에 이벤트 삽입
+    var buttonEl = document.getElementsByClassName("talent");
+    
+    var len = buttonEl.length;
+    for (let i = 0; i < len; i++){
+        buttonEl.item(i).onclick = select_talent;
+    }
+
+    var buttonEl = document.getElementsByClassName("card_type");
+    
+    var len = buttonEl.length;
+    for (let i = 0; i < len; i++){
+        buttonEl.item(i).onclick = select_card_type;
+    }
+
+    document.getElementById("card").onclick = push_img;
+    
+
+</script>
+
+</html>
