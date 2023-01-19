@@ -7,45 +7,27 @@
     <title>CliftonStrengths</title>
 
     <style>
-
-        body{
-            background-color:cornsilk;
-        }
-
-        /* card type */
-        .card_type {
-            display: grid;
-            text-align: center;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 3px dashed black;
-            
-            /* 양쪽이 같은 크기가 됨 */
-            grid-template-columns: 1fr 1fr; 
-        }
-
-        .card_type button {
-            font-size: 180%;
-            border: 2px solid black;
-            padding: 10px;
-            font-weight: bold;
-            margin: 5px;
-
-            background-color: white;
+        body {
+            background-color: cornsilk;
         }
 
         /* section */
         .section {
             display: grid;
             text-align: center;
+            margin-top: 5px;
             
+            height: 60px;
+
             /* 양쪽이 같은 크기가 됨 */
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
-        .section div {
-            font-size: 150%;
-            border: 2px solid black;
+        .section button {
+            font-size: 110%;
+            font-weight: bold;
+            color: white;
+            border: 0px solid black;
             margin: 1px;
         }
 
@@ -53,48 +35,104 @@
         .contents {
             display: grid;
             text-align: center;
-            
+
             /* 양쪽이 같은 크기가 됨 */
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
-        .talents{
+        .talents {
             display: grid;
-            grid-template-columns: 1fr 1fr; 
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         }
 
-        .talents button{
+        .talents button {
             font-size: 110%;
             font-weight: bold;
             padding-top: 20%;
             padding-bottom: 20%;
-            
             margin: 1px;
         }
 
-        .executing button, .section .executing{
-            background-color:blueviolet;
+        /* card type */
+        .card_type {
+            display: grid;
+            text-align: center;
+            height: 60px;
+            margin: 5px;
+            
+            /* 양쪽이 같은 크기가 됨 */
+            grid-template-columns: 1fr 1fr;
         }
 
-        .influencing button, .section .influencing{
-            background-color:darkorange;
+        .card_type button {
+            font-size: 120%;
+            border: 2px solid gray;
+            padding: 1px;
+            font-weight: bold;
+            margin: 1px;
+
+            background-color: white;
         }
 
-        .relationship button, .section .relationship{
-            background-color:dodgerblue;
+        /* etc */
+
+        .section .executing {
+            background-color: rgb(138, 43, 226);
+        }
+        .executing button {
+            color: rgb(138, 43, 226);
+            border: 1px solid rgb(138, 43, 226);
+            background-color: white;
         }
 
-        .strategy button, .section .strategy{
-            background-color:darkgreen;
+        .section .influencing {
+            background-color: rgb(255, 139, 0);
+        }
+        .influencing button {
+            color: rgb(255, 139, 0);
+            border: 1px solid rgb(255, 139, 0);
+            background-color: white;
         }
 
-        #blank{
+        .section .relationship {
+            background-color: rgb(30, 144, 255);
+        }
+        .relationship button {
+            color: rgb(30, 144, 255);
+            border: 1px solid rgb(30, 144, 255);
+            background-color: white;
+        }
+
+        .section .strategy {
+            background-color: rgb(0, 153, 0);
+        }
+        .strategy button {
+            color: rgb(0, 153, 0);
+            border: 1px solid rgb(0, 153, 0);
+            background-color: white;
+        }
+
+        #blank {
             opacity: 0;
         }
 
-        .talent:active{
+        .talent:active {
             border: 2px solid yellow;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr;
+        }
+
+        .card_view {
+            display: grid;
+            grid-template-rows: 60px 1fr;
+        }
+
+        #card {
+            margin: 6px;
         }
 
     </style>
@@ -103,92 +141,103 @@
 
 <body>
 
-    <div class="card_type">
+    <div class="grid">
 
-        <button id="type_1" value="theme deep understanding">테마 심층 이해</button>
-        <button id="type_2" value="theme interaction">테마 상호 작용</button>
+        <div>
+
+            <div class="section">
+
+                <button class="executing">실행력</button>
+                <button class="influencing">영향력</button>
+                <button class="relationship">대인관계 구축</button>
+                <button class="strategy">전략적 사고</button>
+
+            </div>
+
+            <div class="contents">
+
+                <!-- 실행력 -->
+                <div class="talents executing">
+                    <!-- <div id="책임" name="responsibility" onclick="out_img()">책임</div> -->
+
+                    <button class="talent" value="7_책임">책임</button>
+                    <button class="talent" value="18_정리">정리</button>
+                    <button class="talent" value="22_공정성">공정성</button>
+                    <button class="talent" value="25_집중">집중</button>
+                    <button class="talent" value="27_체계">체계</button>
+                    <button class="talent" value="29_신념">신념</button>
+                    <button class="talent" value="30_성취">성취</button>
+                    <button class="talent" value="32_심사숙고">심사숙고</button>
+                    <button class="talent" value="34_복구">복구</button>
+                    <button name="blank" id="blank">blank</button>
+
+                </div>
+
+                <!-- 영향력 -->
+                <div class="talents influencing">
+
+                    <button class="talent" value="8_자기확신">자기확신</button>
+                    <button class="talent" value="10_최상화">최상화</button>
+                    <button class="talent" value="11_커뮤니케이션">커뮤니케이션</button>
+                    <button class="talent" value="20_행동">행동</button>
+                    <button class="talent" value="23_존재감">존재감</button>
+                    <button class="talent" value="26_주도력">주도력</button>
+                    <button class="talent" value="31_승부">승부</button>
+                    <button class="talent" value="33_사교성">사교성</button>
+                    <button name="blank" id="blank">blank</button>
+                    <button name="blank" id="blank">blank</button>
+
+                </div>
+
+                <!-- 대인관계 구축 -->
+                <div class="talents relationship">
+
+                    <button class="talent" value="5_공감">공감</button>
+                    <button class="talent" value="6_개별화">개별화</button>
+                    <button class="talent" value="9_포용">포용</button>
+                    <button class="talent" value="12_절친">절친</button>
+                    <button class="talent" value="13_개발">개발</button>
+                    <button class="talent" value="15_적응">적응</button>
+                    <button class="talent" value="16_연결성">연결성</button>
+                    <button class="talent" value="19_긍정">긍정</button>
+                    <button class="talent" value="28_화합">화합</button>
+                    <button name="blank" id="blank">blank</button>
+
+                </div>
+
+                <!-- 전략적 사고 -->
+                <div class="talents strategy">
+
+                    <button class="talent" value="1_전략">전략</button>
+                    <button class="talent" value="2_배움">배움</button>
+                    <button class="talent" value="3_분석">분석</button>
+                    <button class="talent" value="4_지적사고">지적사고</button>
+                    <button class="talent" value="14_발상">발상</button>
+                    <button class="talent" value="17_수집">수집</button>
+                    <button class="talent" value="21_회고">회고</button>
+                    <button class="talent" value="24_미래지향">미래지향</button>
+                    <button name="blank" id="blank">blank</button>
+                    <button name="blank" id="blank">blank</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card_view">
+
+            <div class="card_type">
+
+                <button id="type_1" value="theme deep understanding">테마 심층 이해</button>
+                <button id="type_2" value="theme interaction">테마 상호 작용</button>
+    
+            </div>
+    
+            <img id="card" src="img/Gallup Strengths Coach.png" alt="Talent Card">
+
+        </div>
+        
 
     </div>
-
-    <div class="section">
-
-        <div class="executing">실행력</div>
-        <div class="influencing">영향력</div>
-        <div class="relationship">대인관계 구축</div>
-        <div class="strategy">전략적 사고</div>
-
-    </div>
-
-    <div class="contents">
-
-        <!-- 실행력 -->
-        <div class="talents executing">
-            <!-- <div id="책임" name="responsibility" onclick="out_img()">책임</div> -->
-            
-            <button class="talent" value="7_책임">책임</button>
-            <button class="talent" value="18_정리">정리</button>
-            <button class="talent" value="22_공정성">공정성</button>
-            <button class="talent" value="25_집중">집중</button>
-            <button class="talent" value="27_체계">체계</button>
-            <button class="talent" value="29_신념">신념</button>
-            <button class="talent" value="30_성취">성취</button>
-            <button class="talent" value="32_심사숙고">심사숙고</button>
-            <button class="talent" value="34_복구">복구</button>
-            <button name="blank" id="blank">blank</button>
-
-        </div>
-
-        <!-- 영향력 -->
-        <div class="talents influencing">
-            
-            <button class="talent" value="8_자기확신">자기확신</button>
-            <button class="talent" value="10_최상화">최상화</button>
-            <button class="talent" value="11_커뮤니케이션">커뮤니케이션</button>
-            <button class="talent" value="20_행동">행동</button>
-            <button class="talent" value="23_존재감">존재감</button>
-            <button class="talent" value="26_주도력">주도력</button>
-            <button class="talent" value="31_승부">승부</button>
-            <button class="talent" value="33_사교성">사교성</button>
-            <button name="blank" id="blank">blank</button>
-            <button name="blank" id="blank">blank</button>
-
-        </div>
-
-        <!-- 대인관계 구축 -->
-        <div class="talents relationship">
-
-            <button class="talent" value="5_공감">공감</button>
-            <button class="talent" value="6_개별화">개별화</button>
-            <button class="talent" value="9_포용">포용</button>
-            <button class="talent" value="12_절친">절친</button>
-            <button class="talent" value="13_개발">개발</button>
-            <button class="talent" value="15_적응">적응</button>
-            <button class="talent" value="16_연결성">연결성</button>
-            <button class="talent" value="19_긍정">긍정</button>
-            <button class="talent" value="28_화합">화합</button>
-            <button name="blank" id="blank">blank</button>
-
-        </div>
-
-        <!-- 전략적 사고 -->
-        <div class="talents strategy">
-
-            <button class="talent" value="1_전략">전략</button>
-            <button class="talent" value="2_배움">배움</button>
-            <button class="talent" value="3_분석">분석</button>
-            <button class="talent" value="4_지적사고">지적사고</button>
-            <button class="talent" value="14_발상">발상</button>
-            <button class="talent" value="17_수집">수집</button>
-            <button class="talent" value="21_회고">회고</button>
-            <button class="talent" value="24_미래지향">미래지향</button>
-            <button name="blank" id="blank">blank</button>
-            <button name="blank" id="blank">blank</button>
-
-        </div>
-
-    </div>
-
-    <img id="card" src="img/Gallup Strengths Coach.png" alt="Talent Card">
 
 </body>
 
@@ -202,17 +251,22 @@
     var card_talent;
 
     // default : card type 1 
-    card_type.style.backgroundColor = "yellow";
+    card_type.style.backgroundColor = "black";
+    card_type.style.color = "white";
 
 
     //// card type 선택
-    function select_card_type(event){
+    function select_card_type(event) {
 
         // 이전 비활성화
         card_type.style.backgroundColor = "white";
+        card_type.style.color = "gray";
+        card_type.style.borderColor = "gray";
 
         // 새로 활성화
-        event.target.style.backgroundColor = "yellow";
+        event.target.style.backgroundColor = "black";
+        event.target.style.color = "white";
+        event.target.style.borderColor = "black";
 
         // 변수 업데이트
         card_type = event.target;
@@ -223,10 +277,18 @@
     }
 
     //// 재능 선택
-    function select_talent(event){
+    function select_talent(event) {
+
+        // 이전 재능 비활성화
+        if (card_talent){
+            card_talent.style.color = card_talent.style.borderColor;
+            card_talent.style.backgroundColor = "white";
+        }
 
         // update talent
         card_talent = event.target;
+        card_talent.style.color = "white";
+        card_talent.style.backgroundColor = "black";
 
         // 카드 업데이트
         update_card();
@@ -234,7 +296,7 @@
     }
 
     //// 이미지 클릭 시 토글
-    function push_img(event){
+    function push_img(event) {
 
         card_page = !card_page;
 
@@ -245,13 +307,13 @@
 
     //// 재능 카드 보여주기
     function update_card() {
-        
+
         // talent 값이 있을 때만
-        if (card_talent){
+        if (card_talent) {
 
             var img_loc = 'img/' + card_type.value + '/'
-                          + convert_page(card_page) + '/'
-                          + card_talent.value;
+                + convert_page(card_page) + '/'
+                + card_talent.value;
 
             document.getElementById("card").src = img_loc + ".png";
 
@@ -259,17 +321,17 @@
     }
 
     //// convert file loc
-    function convert_page(card_page){
+    function convert_page(card_page) {
 
         var page_loc;
         var list_page_loc;
 
         // list_page_loc
-        if (card_type.id == "type_1"){
+        if (card_type.id == "type_1") {
             list_page_loc = ['deep', 'compare'];
         }
 
-        else{
+        else {
             list_page_loc = ['adj', 'noun'];
         }
 
@@ -287,21 +349,21 @@
 
     //// 버튼에 이벤트 삽입
     var buttonEl = document.getElementsByClassName("talent");
-    
+
     var len = buttonEl.length;
-    for (let i = 0; i < len; i++){
+    for (let i = 0; i < len; i++) {
         buttonEl.item(i).onclick = select_talent;
     }
 
     var buttonEl = document.getElementsByClassName("card_type");
-    
+
     var len = buttonEl.length;
-    for (let i = 0; i < len; i++){
+    for (let i = 0; i < len; i++) {
         buttonEl.item(i).onclick = select_card_type;
     }
 
     document.getElementById("card").onclick = push_img;
-    
+
 
 </script>
 
