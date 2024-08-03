@@ -20,7 +20,7 @@
             height: 60px;
 
             /* 양쪽이 같은 크기가 됨 */
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
         .section button {
@@ -37,21 +37,23 @@
             text-align: center;
 
             /* 양쪽이 같은 크기가 됨 */
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
         .talents {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
         }
 
         .talents button {
             font-size: 110%;
             font-weight: bold;
-            padding-top: 20%;
-            padding-bottom: 20%;
+            padding-top: 10%;
+            padding-bottom: 10%;
             margin: 1px;
+            
+            height: 80px;
         }
 
         /* card type */
@@ -123,7 +125,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: 3fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
         }
 
         .card_view {
@@ -147,45 +149,28 @@
 
             <div class="section">
 
-                <button class="executing">실행력</button>
-                <button class="influencing">영향력</button>
-                <button class="relationship">대인관계 구축</button>
                 <button class="strategy">전략적 사고</button>
+                <button class="relationship">대인관계 구축</button>
 
             </div>
 
             <div class="contents">
 
-                <!-- 실행력 -->
-                <div class="talents executing">
-                    <!-- <div id="책임" name="responsibility" onclick="out_img()">책임</div> -->
+                <!-- 전략적 사고 -->
+                <div class="talents strategy">
 
-                    <button class="talent" name="executing" value="7_책임">책임</button>
-                    <button class="talent" name="executing" value="18_정리">정리</button>
-                    <button class="talent" name="executing" value="22_공정성">공정성</button>
-                    <button class="talent" name="executing" value="25_집중">집중</button>
-                    <button class="talent" name="executing" value="27_체계">체계</button>
-                    <button class="talent" name="executing" value="29_신념">신념</button>
-                    <button class="talent" name="executing" value="30_성취">성취</button>
-                    <button class="talent" name="executing" value="32_심사숙고">심사숙고</button>
-                    <button class="talent" name="executing" value="34_복구">복구</button>
-                    <button name="blank" id="blank">blank</button>
+                    <button class="talent" name="strategy" value="1_전략">전략</button>
+                    <button class="talent" name="strategy" value="2_배움">배움</button>
+                    <button class="talent" name="strategy" value="3_분석">분석</button>
+                    <button class="talent" name="strategy" value="4_지적사고">지적사고</button>
+                    <button class="talent" name="strategy" value="14_발상">발상</button>
+                    <button class="talent" name="strategy" value="17_수집">수집</button>
+                    <button class="talent" name="strategy" value="21_회고">회고</button>
+                    <button class="talent" name="strategy" value="24_미래지향">미래지향</button>
+                    <button class="blank" name="blank"></button>
 
-                </div>
-
-                <!-- 영향력 -->
-                <div class="talents influencing">
-
-                    <button class="talent" name="influencing" value="8_자기확신">자기확신</button>
-                    <button class="talent" name="influencing" value="10_최상화">최상화</button>
-                    <button class="talent" name="influencing" value="11_커뮤니케이션">커뮤니케이션</button>
-                    <button class="talent" name="influencing" value="20_행동">행동</button>
-                    <button class="talent" name="influencing" value="23_존재감">존재감</button>
-                    <button class="talent" name="influencing" value="26_주도력">주도력</button>
-                    <button class="talent" name="influencing" value="31_승부">승부</button>
-                    <button class="talent" name="influencing" value="33_사교성">사교성</button>
-                    <button name="blank" id="blank">blank</button>
-                    <button name="blank" id="blank">blank</button>
+                    <!-- 투명한 버튼 -->
+                    <!-- <button name="blank" id="blank">blank</button> -->
 
                 </div>
 
@@ -201,26 +186,53 @@
                     <button class="talent" name="relationship" value="16_연결성">연결성</button>
                     <button class="talent" name="relationship" value="19_긍정">긍정</button>
                     <button class="talent" name="relationship" value="28_화합">화합</button>
-                    <button name="blank" id="blank">blank</button>
 
                 </div>
 
-                <!-- 전략적 사고 -->
-                <div class="talents strategy">
-
-                    <button class="talent" name="strategy" value="1_전략">전략</button>
-                    <button class="talent" name="strategy" value="2_배움">배움</button>
-                    <button class="talent" name="strategy" value="3_분석">분석</button>
-                    <button class="talent" name="strategy" value="4_지적사고">지적사고</button>
-                    <button class="talent" name="strategy" value="14_발상">발상</button>
-                    <button class="talent" name="strategy" value="17_수집">수집</button>
-                    <button class="talent" name="strategy" value="21_회고">회고</button>
-                    <button class="talent" name="strategy" value="24_미래지향">미래지향</button>
-                    <button name="blank" id="blank">blank</button>
-                    <button name="blank" id="blank">blank</button>
-
-                </div>
             </div>
+
+            <div class="section">
+
+                <button class="executing">실행력</button>
+                <button class="influencing">영향력</button>
+
+            </div>
+            
+            <div class="contents">
+
+                <!-- 실행력 -->
+                <div class="talents executing">
+                    <!-- <div id="책임" name="responsibility" onclick="out_img()">책임</div> -->
+
+                    <button class="talent" name="executing" value="7_책임">책임</button>
+                    <button class="talent" name="executing" value="18_정리">정리</button>
+                    <button class="talent" name="executing" value="22_공정성">공정성</button>
+                    <button class="talent" name="executing" value="25_집중">집중</button>
+                    <button class="talent" name="executing" value="27_체계">체계</button>
+                    <button class="talent" name="executing" value="29_신념">신념</button>
+                    <button class="talent" name="executing" value="30_성취">성취</button>
+                    <button class="talent" name="executing" value="32_심사숙고">심사숙고</button>
+                    <button class="talent" name="executing" value="34_복구">복구</button>
+
+                </div>
+
+                <!-- 영향력 -->
+                <div class="talents influencing">
+
+                    <button class="talent" name="influencing" value="8_자기확신">자기확신</button>
+                    <button class="talent" name="influencing" value="10_최상화">최상화</button>
+                    <button class="talent" name="influencing" value="11_커뮤니케이션">커뮤니케이션</button>
+                    <button class="talent" name="influencing" value="20_행동">행동</button>
+                    <button class="talent" name="influencing" value="23_존재감">존재감</button>
+                    <button class="talent" name="influencing" value="26_주도력">주도력</button>
+                    <button class="talent" name="influencing" value="31_승부">승부</button>
+                    <button class="talent" name="influencing" value="33_사교성">사교성</button>
+                    <button class="blank" name="influencing"></button>
+
+                </div>
+
+            </div>
+
         </div>
 
         <div class="card_view">
