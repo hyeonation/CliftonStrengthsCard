@@ -8,6 +8,8 @@ body {
     grid-template-columns: 2fr 1fr 1fr;
 }
 
+
+/*************************/
 /* section */
 .section {
     display: grid;
@@ -28,6 +30,21 @@ body {
     margin: 1px;
 }
 
+.section .executing {
+    background-color: rgb(138, 43, 226);
+}
+.section .influencing {
+    background-color: rgb(255, 139, 0);
+}
+.section .relationship {
+    background-color: rgb(30, 144, 255);
+}
+.section .strategy {
+    background-color: rgb(0, 153, 0);
+}
+
+
+/*************************/
 /* contents */
 .contents {
     display: grid;
@@ -52,8 +69,42 @@ body {
     
     height: 80px;
 }
+.talent:active {
+    border: 2px solid yellow;
+}
 
-/* card type */
+/* contents 버튼 공통 */
+.contents button {
+    background-color: white;
+    border: 1px solid 
+}
+
+/* 각 버튼 */
+.executing button {
+    color: rgb(138, 43, 226);
+    border-color: rgb(138, 43, 226);
+}
+.influencing button {
+    color: rgb(255, 139, 0);
+    border-color: rgb(255, 139, 0);
+}
+.relationship button {
+    color: rgb(30, 144, 255);
+    border-color: rgb(30, 144, 255);
+}
+.strategy button {
+    color: rgb(0, 153, 0);
+    border-color: rgb(0, 153, 0);
+}
+
+
+/*************************/
+/* card view */
+.card_view {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
 .card_type {
     display: grid;
     text-align: center;
@@ -74,57 +125,13 @@ body {
     background-color: white;
 }
 
-/* etc */
-
-.section .executing {
-    background-color: rgb(138, 43, 226);
-}
-.executing button {
-    color: rgb(138, 43, 226);
-    border: 1px solid rgb(138, 43, 226);
-    background-color: white;
-}
-
-.section .influencing {
-    background-color: rgb(255, 139, 0);
-}
-.influencing button {
-    color: rgb(255, 139, 0);
-    border: 1px solid rgb(255, 139, 0);
-    background-color: white;
-}
-
-.section .relationship {
-    background-color: rgb(30, 144, 255);
-}
-.relationship button {
-    color: rgb(30, 144, 255);
-    border: 1px solid rgb(30, 144, 255);
-    background-color: white;
-}
-
-.section .strategy {
-    background-color: rgb(0, 153, 0);
-}
-.strategy button {
-    color: rgb(0, 153, 0);
-    border: 1px solid rgb(0, 153, 0);
-    background-color: white;
-}
-
-#blank {
-    opacity: 0;
-}
-
-.talent:active {
-    border: 2px solid yellow;
-}
-
-.card_view {
-    display: grid;
-    grid-template-rows: 60px 1fr;
-}
-
 #card {
     margin: 6px;
+}
+
+
+/*************************/
+/* etc */
+#blank {
+    opacity: 0;
 }
