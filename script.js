@@ -130,11 +130,13 @@ function convert_color(name){
 //// 버튼에 이벤트 삽입
 var buttonEl = document.getElementsByClassName("talent");
 
+// 재능 버튼
 var len = buttonEl.length;
 for (let i = 0; i < len; i++) {
     buttonEl.item(i).onclick = select_talent;
 }
 
+// 카드 타입
 var buttonEl = document.getElementsByClassName("card_type");
 
 var len = buttonEl.length;
@@ -142,4 +144,5 @@ for (let i = 0; i < len; i++) {
     buttonEl.item(i).onclick = select_card_type;
 }
 
+// 재능 카드
 document.getElementById("card").onclick = push_img;
