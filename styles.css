@@ -5,7 +5,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
 }
 
 
@@ -103,6 +103,7 @@ body {
 .card_view {
     display: grid;
     grid-template-rows: 60px 1fr;
+    justify-content: center;
 }
 
 .card_type {
@@ -112,7 +113,7 @@ body {
     margin: 5px;
     
     /* 양쪽이 같은 크기가 됨 */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card_type button {
