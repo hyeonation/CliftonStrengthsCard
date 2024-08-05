@@ -1,7 +1,7 @@
 //// preset
 var card_type = document.getElementById("type_1");
 var card_page = true;
-var card_talent;
+var card_talent = null;
 
 // default : card type 1 
 card_type.style.backgroundColor = "black";
@@ -23,6 +23,19 @@ function select_card_type(event) {
 
     // 변수 업데이트
     card_type = event.target;
+
+    // '테마 조합'일 때
+    if (card_type.id == "type_3"){
+        
+        // 이전 재능 비활성화
+        if (card_talent){
+            card_talent.style.color = card_talent.style.borderColor;
+            card_talent.style.backgroundColor = "white";
+        }
+
+        // card_talent 초기화
+        card_talent = null;
+    }
 
     // 카드 업데이트
     update_card();
@@ -65,7 +78,7 @@ function update_card() {
     if (card_talent) {
 
         var img_loc = 'img/' + card_type.value + '/'
-            + convert_page(card_page) + '/'
+            + convert_page(card_page)
             + card_talent.value;
 
         document.getElementById("card").src = img_loc + ".png";
@@ -81,11 +94,15 @@ function convert_page(card_page) {
 
     // list_page_loc
     if (card_type.id == "type_1") {
-        list_page_loc = ['deep', 'compare'];
+        list_page_loc = ['deep/', 'compare/'];
     }
 
-    else {
-        list_page_loc = ['adj', 'noun'];
+    else if (card_type.id == "type_2") {
+        list_page_loc = ['adj/', 'noun/'];
+    }
+
+    else if (card_type.id == "type_3") {
+        list_page_loc = ['', ''];
     }
 
     // page_loc

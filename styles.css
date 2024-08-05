@@ -118,9 +118,10 @@ body {
 
 .card_type button {
     font-size: 120%;
+    font-weight: bold;
+    color: gray;
     border: 2px solid gray;
     padding: 1px;
-    font-weight: bold;
     margin: 1px;
 
     background-color: white;
