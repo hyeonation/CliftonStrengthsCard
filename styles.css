@@ -138,3 +138,8 @@ body {
     /* 투명하게 */
     opacity: 0;
 }
+
+#copyright {
+    margin-top: 0px;
+    font-size: 9pt;
+}
