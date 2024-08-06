@@ -136,6 +136,8 @@ function push_img(event) {
 function update_card() {
 
     var img_loc;
+
+    // type_3
     if (card_type.id == "type_3") {
 
         var file_name = '';
@@ -161,6 +163,7 @@ function update_card() {
                  + file_name;
     }
 
+    // type_1, type_2
     else{
 
         // talent 값이 있을 때만
@@ -168,8 +171,15 @@ function update_card() {
 
             // 경로 생성
             img_loc = 'img/' + card_type.value + '/'
-                     + convert_page(card_page)
-                     + card_talent.value;
+            + convert_page(card_page)
+            + card_talent.value;
+        }
+
+        // talent 값이 없을 때
+        else{
+
+            // 경로 생성
+            img_loc = 'img/default img';
         }
     }
 
