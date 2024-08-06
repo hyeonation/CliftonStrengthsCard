@@ -64,7 +64,7 @@ function select_talent(event) {
         if (card_talent.includes(event.target)){
 
             // 기존 있던 이벤트 제거
-            card_talent.pop(card_talent.indexOf(event.target))
+            card_talent = card_talent.filter((element) => element !== event.target);
 
             // 선택된 이벤트 비활성화
             ctrl_talent_btn(event.target, false);
